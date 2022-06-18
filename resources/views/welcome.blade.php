@@ -198,8 +198,11 @@
                             </div>
 
                              <div class="row col-sm-12">
-                                <div class="col-sm-12">
+                                <div class="col-sm-6">
                                     <button type="submit" class="btn btn-primary form-control" >Kirim</button>
+                                </div> 
+                                 <div class="col-sm-6">
+                                    <button type="submit" class="btn btn-danger form-control" >Reset</button>
                                 </div> 
                             </div> 
                         </div> 
