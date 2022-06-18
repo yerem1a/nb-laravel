@@ -127,9 +127,9 @@
                                           <select class="custom-select form-control" name="pekerjaan">
                                             <option selected>Choose...</option>
                                             <option value="children"  @if(isset($input)) @if($input['pekerjaan'] == 'children') selected @endif @endif>Anak-Anak</option>
-                                            <option value="Govt_job" @if(isset($input)) @if($input['pekerjaan'] == 'Govt_job') selected @endif @endif>Pekerjaan Pemerintah</option>
-                                            <option value="Private" @if(isset($input)) @if($input['pekerjaan'] == 'Private') selected @endif @endif>Pribadi</option>
-                                            <option value="Self-employed" @if(isset($input)) @if($input['pekerjaan'] == 'Self-employed') selected @endif @endif>Karyawan</option>
+                                            <option value="Govt_job" @if(isset($input)) @if($input['pekerjaan'] == 'Govt_job') selected @endif @endif>Pegawai Negeri</option>
+                                            <option value="Private" @if(isset($input)) @if($input['pekerjaan'] == 'Private') selected @endif @endif>Pegawai Swasta</option>
+                                            <option value="Self-employed" @if(isset($input)) @if($input['pekerjaan'] == 'Self-employed') selected @endif @endif>Wirausahawan/Pekerja Lepas</option>
                                           </select>
                                         </div>
                                     </div> 
