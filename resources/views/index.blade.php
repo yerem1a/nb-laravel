@@ -25,7 +25,7 @@
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                            <input type="radio" name="jk"  value="Male" @if(isset($input)) @if($input['jk'] == 'Male') checked @endif @endif>
+                                            <input type="radio" name="jk"  value="Male" @if(isset($input)) @if($input['jk'] == 'Male') checked @endif @endif required>
                                             </div>
                                           </div>
                                           <label class="form-control">Pria</label>
@@ -47,7 +47,7 @@
                                     </div> 
                                     <div class="col-sm-6">
                                          <div class="input-group"> 
-                                           <input type="number" class="form-control" name="umur" value="@if(isset($input)){{$input['umur']}}@endif">
+                                           <input type="number" class="form-control" name="umur" value="@if(isset($input)){{$input['umur']}}@endif" required>
                                         </div>
                                     </div> 
                                 </div>
@@ -60,7 +60,7 @@
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                            <input type="radio" name="hipertensi"  value="1" @if(isset($input)) @if($input['hipertensi'] == 1) checked @endif @endif>
+                                            <input type="radio" name="hipertensi"  value="1" @if(isset($input)) @if($input['hipertensi'] == 1) checked @endif @endif required>
                                             </div>
                                           </div>
                                           <label class="form-control">Ya</label>
@@ -82,7 +82,7 @@
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                            <input type="radio" name="penyakit_jantung"  value="1" @if(isset($input)) @if($input['penyakit_jantung'] == 1) checked @endif @endif>
+                                            <input type="radio" name="penyakit_jantung"  value="1" @if(isset($input)) @if($input['penyakit_jantung'] == 1) checked @endif @endif required>
                                             </div>
                                           </div>
                                           <label class="form-control">Ya</label>
@@ -104,7 +104,7 @@
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                            <input type="radio" name="menikah"  value="Yes" @if(isset($input)) @if($input['menikah'] == 'Yes') checked @endif @endif>
+                                            <input type="radio" name="menikah"  value="Yes" @if(isset($input)) @if($input['menikah'] == 'Yes') checked @endif @endif required>
                                             </div>
                                           </div>
                                           <label class="form-control">Ya</label>
@@ -124,8 +124,8 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="input-group">
-                                          <select class="custom-select form-control" name="pekerjaan">
-                                            <option selected>Choose...</option>
+                                          <select class="custom-select form-control" name="pekerjaan" required>
+                                            <option value="" selected>Choose...</option>
                                             <option value="children"  @if(isset($input)) @if($input['pekerjaan'] == 'children') selected @endif @endif>Anak-Anak</option>
                                             <option value="Govt_job" @if(isset($input)) @if($input['pekerjaan'] == 'Govt_job') selected @endif @endif>Pegawai Negeri</option>
                                             <option value="Private" @if(isset($input)) @if($input['pekerjaan'] == 'Private') selected @endif @endif>Pegawai Swasta</option>
@@ -143,7 +143,7 @@
                                         <div class="input-group">
                                           <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                            <input type="radio" name="tinggal" value="Urban" @if(isset($input)) @if($input['tinggal'] == 'Urban') checked @endif @endif>
+                                            <input type="radio" name="tinggal" value="Urban" @if(isset($input)) @if($input['tinggal'] == 'Urban') checked @endif @endif required>
                                             </div>
                                           </div>
                                           <label class="form-control">Perkotaan</label>
@@ -165,7 +165,7 @@
                                     </div> 
                                     <div class="col-sm-6">
                                          <div class="input-group"> 
-                                           <input type="number" class="form-control" name="glukosa" value="@if(isset($input)){{$input['glukosa']}}@endif" step=".01">
+                                           <input type="number" class="form-control" name="glukosa" value="@if(isset($input)){{$input['glukosa']}}@endif" step=".01" required>
                                         </div>
                                     </div> 
                                 </div> 
@@ -178,7 +178,7 @@
                                     </div> 
                                     <div class="col-sm-6">
                                          <div class="input-group"> 
-                                           <input type="number" class="form-control" name="bmi" value="@if(isset($input)){{$input['bmi']}}@endif" step=".01">
+                                           <input type="number" class="form-control" name="bmi" value="@if(isset($input)){{$input['bmi']}}@endif" step=".01" required>
                                         </div>
                                     </div> 
                                 </div> 
@@ -189,8 +189,8 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="input-group">
-                                          <select class="custom-select form-control" name="merokok">
-                                            <option selected>Choose...</option>
+                                          <select class="custom-select form-control" name="merokok" required>
+                                            <option value=""  selected>Choose...</option>
                                             <option value="never smoked" @if(isset($input)) @if($input['merokok'] == 'never smoked') selected @endif @endif>Tidak pernah merokok</option> 
                                             <option value="formerly smoked"  @if(isset($input)) @if($input['merokok'] == 'formerly smoked') selected @endif @endif>Sebelumnya merokok</option>  
                                             <option value="smokes" @if(isset($input))  @if($input['merokok'] == 'smoked') selected @endif @endif>Merokok</option> 
