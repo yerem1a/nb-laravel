@@ -10,6 +10,7 @@ DROP FUNCTION `sf_probability_avg_glucose_level`;
 DROP FUNCTION `sf_probability_residence_type`;
 DROP FUNCTION `sf_probability_work_type`;
 DROP FUNCTION `sf_probability_ever_married`;
+DROP FUNCTION `sf_probability_heart_disease`;
 DROP FUNCTION `sf_probability_hypertension`;
 DROP FUNCTION `sf_probability_age`;
 DROP FUNCTION `sf_probability_gender`;
