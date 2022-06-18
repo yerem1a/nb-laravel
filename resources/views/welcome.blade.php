@@ -209,7 +209,7 @@
                         Apakah saya mengalamin strok ? Ya<br>
                         Presentase Keyakinan
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width: 99%">
+                          <div class="progress-bar bg-success" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width: 99%">
                               99%
                           </div>
                         </div>
