@@ -407,7 +407,7 @@ BEGIN
 
     CALL `sp_predict_get`(`gender`, `age`, `hypertension`, `heart_disease`, `ever_married`, `work_type`, `residence_type`, `avg_glucose_level`, `bmi`, `smoking_status`, `probability_stroke_0`, `probability_stroke_1`, `stroke`);
 
-    SELECT `probability_stroke_0`, `probability_stroke_1`, `stroke`;
+    SELECT probability_stroke_0, probability_stroke_1, stroke;
 END $$
 DELIMITER ;
 
