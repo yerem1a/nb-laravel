@@ -446,16 +446,15 @@ DELIMITER $$
 CREATE PROCEDURE `sp_evaluate` ()
 BEGIN
     SELECT
-    `R`.`correct`,
-    `R`.`incorrect`,
-    `R`.`total`,
-    (`R`.`correct` / `R`.`total` * 100) `accuracy`,
-    (`R`.`incorrect` / `R`.`total` * 100) `error`
+    (`R`.`true_positive` / (`R`.`true_positive` + `R`.`false_positive`) * 100) `precision`,
+    (`R`.`true_positive` / (`R`.`true_positive` + `R`.`false_negative`) * 100) `recall`,
+    ((`R`.`true_positive` + `R`.`true_negative`) / (`R`.`true_positive` + `R`.`true_negative` + `R`.`false_positive` + `R`.`false_negative`) * 100) `accuracy`
     FROM (
         SELECT
-        (SUM(`D`.`prediction` = `D`.`actual`)) `correct`,
-        (SUM(`D`.`prediction` != `D`.`actual`)) `incorrect`,
-        (COUNT(*)) `total`
+        (SUM(`D`.`prediction` = `D`.`actual` AND `D`.`prediction`)) `true_positive`,
+        (SUM(`D`.`prediction` = `D`.`actual` AND NOT `D`.`prediction`)) `true_negative`,
+        (SUM(`D`.`prediction` != `D`.`actual` AND `D`.`prediction`)) `false_positive`,
+        (SUM(`D`.`prediction` != `D`.`actual` AND NOT `D`.`prediction`)) `false_negative`
         FROM (
            SELECT `id`, `stroke` `actual`, `sf_test`(`id`) `prediction`
            FROM `dataset`
