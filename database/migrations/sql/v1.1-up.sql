@@ -218,7 +218,7 @@ BEGIN
     INSERT INTO `classifier_discrete` (`attribute`, `value`, `stroke`, `probability`)
     SELECT `attribute`.`data`, `value`.`data`, `stroke`.`data`, `sf_probability_gender`(`value`.`data`, `stroke`.`data`)
     FROM (SELECT 'gender' `data`) `attribute`
-    CROSS JOIN (SELECT 'Male' `data` UNION SELECT 'Female') `value`
+    CROSS JOIN (SELECT 'Male' `data` UNION SELECT 'Female' UNION SELECT 'Other') `value`
     CROSS JOIN (SELECT 0 `data` UNION SELECT 1) `stroke`;
 
     INSERT INTO `classifier_continuous` (`attribute`, `stroke`, `mean`, `stddev`)
@@ -249,7 +249,7 @@ BEGIN
     INSERT INTO `classifier_discrete` (`attribute`, `value`, `stroke`, `probability`)
     SELECT `attribute`.`data`, `value`.`data`, `stroke`.`data`, `sf_probability_work_type`(`value`.`data`, `stroke`.`data`)
     FROM (SELECT 'work_type' `data`) `attribute`
-    CROSS JOIN (SELECT 'children' `data` UNION SELECT 'Govt_job' UNION SELECT 'Private' UNION SELECT 'Self-employed') `value`
+    CROSS JOIN (SELECT 'children' `data` UNION SELECT 'Govt_job' UNION SELECT 'Never_worked' UNION SELECT 'Private' UNION SELECT 'Self-employed') `value`
     CROSS JOIN (SELECT 0 `data` UNION SELECT 1) `stroke`;
 
     INSERT INTO `classifier_discrete` (`attribute`, `value`, `stroke`, `probability`)
